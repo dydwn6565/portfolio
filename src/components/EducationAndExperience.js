@@ -17,7 +17,7 @@ const dash = keyframes`
 const EducationAndExperienceContainer = styled.div`
   width: 100%;
   height: 1100px;
-  border: 1px solid black;
+  // border: 1px solid black;
   
   // position: absolute;
 `;
@@ -43,7 +43,7 @@ const EducationAndExperienceLeft = styled.div`
   height: 1000px;
   margin-top: -200px;
   margin-left: 50px;
-  border: 2px solid black;
+  // border: 2px solid black;
 `;
 
 const EducationAndExperienceContent = styled.div`
@@ -52,7 +52,7 @@ const EducationAndExperienceContent = styled.div`
 const FlagContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  // border: 1px solid black;
   height: 500px;
   margin-top: 200px;
   width: 300px;
@@ -110,7 +110,7 @@ const FootPrintTurnRight = styled.div`
 const ContentContainer = styled.div`
   width: 500px;
   height: 500px;
-  border: 1px solid white;
+  // border: 1px solid white;
   
   margin-left: 80px;
   

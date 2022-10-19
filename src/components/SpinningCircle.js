@@ -10,7 +10,7 @@ const spin = keyframes`
 const SpinningContainer = styled.div`
     width:800px;
     height:800px;
-    border:1px solid black;
+    // border:1px solid black;
     position:absolute;
     display:flex;
     justify-content:center;

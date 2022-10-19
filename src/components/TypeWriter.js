@@ -8,12 +8,12 @@ const TypeWriterContainer = styled.div`
   height: 1200px;
 
   
-  font-size: 40px;
+  font-size: 30px;
   color: white;
 `;
 const TypeWriterInside = styled.div`
   
-  margin-top: 5%;
+  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -27,12 +27,12 @@ function TypeWriter() {
       <TypeWriterContainer>
         <TypeWriterInside>
           <Typewriter
-            words={["Thank you for coming to my Web page"]}
+            words={["Welcome to my Web page","My name is Yongju Lee"]}
             // loop={5}
             loop
             cursor
             cursorStyle="_"
-            typeSpeed={70}
+            typeSpeed={100}
             deleteSpeed={50}
             delaySpeed={1000}
             // onLoopDone={handleDone}
