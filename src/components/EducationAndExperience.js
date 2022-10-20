@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-// import HandDrawnCircle from "../images/HandDrawnCircle.svg"
 
 import { keyframes } from "styled-components";
 import flag from "../images/flag.png";
@@ -17,9 +16,8 @@ const dash = keyframes`
 const EducationAndExperienceContainer = styled.div`
   width: 100%;
   height: 1100px;
-  // border: 1px solid black;
+  min-width: 875px;
   
-  // position: absolute;
 `;
 
 const EducationAndExperienceTitle = styled.div`
@@ -39,30 +37,29 @@ const CircleSvgContainer = styled.path`
   justify-content: center;
 `;
 const EducationAndExperienceLeft = styled.div`
-  width: 50%;
   height: 1000px;
   margin-top: -200px;
-  margin-left: 50px;
-  // border: 2px solid black;
+  
 `;
 
 const EducationAndExperienceContent = styled.div`
-  display:flex
+  display: flex;
+  justify-content: center;
 `;
 const FlagContainer = styled.div`
   display: flex;
   flex-direction: column;
-  // border: 1px solid black;
+  
   height: 500px;
   margin-top: 200px;
   width: 300px;
-  margin-left: 400px;
-  cursor: poiner;
+  margin-left: 50px;
 `;
 
 const FirstFlagContainer = styled.img`
   width: 100px;
   height: 100px;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.5;
@@ -72,6 +69,7 @@ const SecondFlagContainer = styled.img`
   width: 100px;
   height: 100px;
   margin-left: 200px;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.5;
@@ -90,7 +88,7 @@ const LeftDiagonal = styled.div`
 `;
 
 const RightDiagonal = styled.div`
-  // background-image: linear-gradient(45deg, #6303b1, #ff0099);
+  
   transform: skewY(-45deg);
   width: 150px;
   display: flex;
@@ -110,10 +108,10 @@ const FootPrintTurnRight = styled.div`
 const ContentContainer = styled.div`
   width: 500px;
   height: 500px;
-  // border: 1px solid white;
   
-  margin-left: 80px;
-  
+
+  margin-left: 100px;
+
   background: rgba(255, 255, 255, 0.29);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
@@ -135,25 +133,25 @@ padding:20px;
 margin-left:30px;
 `;
 const ContentLi = styled.li`
-  padding:10px;
-`
+  padding: 10px;
+`;
 
 const ContentLiTitle = styled.li`
   padding: 10px;
-  font-weight:bold;
-  font-size:18px;
+  font-weight: bold;
+  font-size: 18px;
 `;
 
 const LookingForCareer = styled.div`
-  font-size:35px;
-  display:flex;
-  justify-content:center;
-  margin-top:220px;
-`
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  margin-top: 220px;
+`;
 
 function EducationAndExperience() {
-  const [showContent, setShowContent] = useState(false);
-  const [contentNumber,setContentNumber]= useState(0);
+  
+  const [contentNumber, setContentNumber] = useState(1);
   useEffect(() => {
     if (circleRef.current) {
     }
@@ -161,13 +159,8 @@ function EducationAndExperience() {
   const circleRef = useRef(null);
 
   const showingContent = (e) => {
-    console.log(e , contentNumber)
-    if(e === contentNumber || (showContent ===false && e !==contentNumber)){
 
-      setShowContent((preValue) => !preValue);
-    }
-    console.log("hit"+e);
-   setContentNumber(e)
+    setContentNumber(e);
   };
   return (
     <div>
@@ -249,7 +242,7 @@ function EducationAndExperience() {
               />
             </FlagContainer>
           </EducationAndExperienceLeft>
-          {showContent && contentNumber === 1 && (
+          {contentNumber === 1 && (
             <ContentContainer>
               <ContentTitle>Education</ContentTitle>
               <Content>
@@ -281,7 +274,7 @@ function EducationAndExperience() {
             </ContentContainer>
           )}
 
-          {showContent && contentNumber === 2 && (
+          {contentNumber === 2 && (
             <ContentContainer>
               <ContentTitle>Work Experience</ContentTitle>
               <Content>
@@ -305,7 +298,7 @@ function EducationAndExperience() {
             </ContentContainer>
           )}
 
-          {showContent && contentNumber === 3 && (
+          {contentNumber === 3 && (
             <ContentContainer>
               <LookingForCareer>Looking for a next career</LookingForCareer>
             </ContentContainer>

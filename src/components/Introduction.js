@@ -21,7 +21,7 @@ import mongodb from "../images/icons/mongodb.png";
 const IntroductionContainer = styled.div`
   width: 800px;
   height: 700px;
-  // border: 1px solid black;
+  
   margin: 0 auto;
   display: flex;
 `;
@@ -41,6 +41,8 @@ const NameContainer = styled.div`
   align-items: center;
   justify-content: center;
   font-weight: bold;
+
+  
 `;
 
 const IntroductionPart = styled.div`

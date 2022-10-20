@@ -2,27 +2,28 @@ import "./App.css";
 import ReactPlayer from "react-player";
 
 import styled from "styled-components";
-import Header from "./components/Header";
+
 import TypeWriter from "./components/TypeWriter";
-import Navigation from "./components/Navigation";
+
 import WhoAmI from "./components/WhoAmI";
 import sea from "./images/sea.jpg";
 import { useEffect, useRef, useState } from "react";
 import SpinningCircle from "./components/SpinningCircle";
 import EducationAndExperience from "./components/EducationAndExperience";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 const VideoComponent = styled.div`
-  // z-index:-1;
+  
 
   margin-top: -120px;
 `;
 const MainComponent = styled.div`
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 420vh;
+  height: 3500px;
   background-image: url(${sea});
-
+  min-width:925px;
   background-position: center;
 `;
 
@@ -30,15 +31,7 @@ const MaincomponentInner = styled.div`
   width: 100%;
   height: 350vh;
 `;
-const MainPageBackGround = styled.div`
-  width: 100%;
-  height: 1100px;
-  position: absolute;
 
-  //  background-color: #333;
-
-  opacity: 0.2;
-`;
 function App() {
   const scrollRef = useRef(null);
   const [hideElement, setHideElement] = useState(false);
@@ -85,7 +78,7 @@ function App() {
   // };
   return (
     <div className="App">
-      {/* <MainComponent ref={scrollRef} onMouseEnter={mouseMove} theme={theme}> */}
+      
       <MainComponent ref={scrollRef} theme={theme}>
         <MaincomponentInner>
           <TypeWriter />
@@ -96,6 +89,7 @@ function App() {
 
           <EducationAndExperience />
           <Projects />
+        <Contact/>
         </MaincomponentInner>
       </MainComponent>
 

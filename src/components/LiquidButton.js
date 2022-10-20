@@ -19,7 +19,7 @@ const LiquidSection = styled.div`
     left: 0;
     width: 170px;
     height: 170px;
-    // background: #79BAEC;
+    
     background: ${props=>props.theme};
     box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
     transition: .5s
@@ -48,7 +48,7 @@ const LiquidSection = styled.div`
     transform: translate(-50%, -75%);
     background: #000;
      border-radius: 45%;
-    // background: rgba(50, 20, 20, 1);
+    
     background-color:black;
     animation: ${animate} 5s linear infinite;
     }
@@ -86,16 +86,17 @@ const LiquidButtonText =styled.span`
 function LiquidButton({type,color}) {
   return (
     <div>
-      {/* <a href="#"> */}
+      
       <LiquidButtonContainer>
+        
         <LiquidButtonText>
-          {/* Button */}
+          
           <img src={type} alt="" width={"30px"} />
         </LiquidButtonText>
     
         <LiquidSection theme={color}></LiquidSection>
       </LiquidButtonContainer>
-      {/* </a> */}
+      
     </div>
   );
 }
