@@ -29,6 +29,7 @@ const TopAndBottomCard = styled.div`
   height: 200px;
 
   display: flex;
+  margin-bottom:100px;
   justify-content: space-around;
   @media (max-width: 1900px) {
     height: 350px;
@@ -54,22 +55,60 @@ const MiddleCard = styled.div`
     margin-bottom:-40px;
   }
 `;
+
+const shoppingMallUrl = "https://myshoppingmall.vercel.app";
+const shoppingMallGithub = " https://github.com/dydwn6565/myshoppingmall";
+const InstagramClone = "https://instagramclone-nine.vercel.app";
+const InstagramGithub = "https://github.com/dydwn6565/instagramclone";
+const scheduleManagementCalendar = "https://schedulemanager.vercel.app";
+const scheduleManagementCalendarGithub =
+  "https://github.com/dydwn6565/schedulemanager"; 
+const spotifyGithub = "https://github.com/dydwn6565/spotifyclone";
+const spotifyClone = "https://spotifyclone1-tau.vercel.app";
+const starbucksLandingPage = "https://starbuckslandingpage-umber.vercel.app"; 
+const starbucksLandingPageGithub =
+  "https://github.com/dydwn6565/starbucksLandingPage";
 function Projects() {
   return (
     <div>
-      <ProjectContainer >
+      <ProjectContainer>
         <ProjectTitle>Projects</ProjectTitle>
 
         <TopAndBottomCard>
-          <Card cardTitle={"Shopping Mall"} image={musinsa} />
-          <Card cardTitle={"Instagram Clone"} image={instagram} />
+          <Card
+            cardTitle={"Shopping Mall"}
+            image={musinsa}
+            url={shoppingMallUrl}
+            github={shoppingMallGithub}
+          />
+          <Card
+            cardTitle={"Instagram Clone"}
+            image={instagram}
+            url={InstagramClone}
+            github={InstagramGithub}
+          />
         </TopAndBottomCard>
         <MiddleCard>
-          <Card cardTitle={"Calendar Schedule Management"} image={calendar} />
+          <Card
+            cardTitle={"Calendar Schedule Management"}
+            image={calendar}
+            url={scheduleManagementCalendar}
+            github={scheduleManagementCalendarGithub}
+          />
         </MiddleCard>
         <TopAndBottomCard>
-          <Card cardTitle={"Spotify Clone"} image={spotify} />
-          <Card cardTitle={"Starbucks Landing Page"} image={starbucks} />
+          <Card
+            cardTitle={"Spotify Clone"}
+            image={spotify}
+            url={spotifyClone}
+            github={spotifyGithub}
+          />
+          <Card
+            cardTitle={"Starbucks Landing Page"}
+            image={starbucks}
+            url={starbucksLandingPage}
+            github={starbucksLandingPageGithub}
+          />
         </TopAndBottomCard>
       </ProjectContainer>
     </div>

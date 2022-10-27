@@ -10,7 +10,7 @@ const ContactBackground = styled.div`
   justify-content: center;
   
   background: #f5f5dc;
-  margin-top: -150px;
+  
   min-width: 772px;
 
   @media (max-width: 1900px) {

@@ -36,7 +36,7 @@ const PushPin = styled.img`
 const Content = styled.div`
   position: relative;
   
-  padding: 10px 15px;
+  // padding: 10px 15px;
   color: #111;
   text-align: center;
   visibility: hidden;
@@ -59,7 +59,7 @@ const Cards = styled.div`
   &:hover {
     height: 370px;
     ${Content} {
-      margin-top: 30px;
+      margin-top: 10px;
       visibility: visible;
       opacity: 1;
       transition-delay: 0.2s;
@@ -100,16 +100,17 @@ margin-left:10px;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-
+  
   &:hover {
     background-color: #2ee59d;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
     transform: translateY(-7px);
+    
   }
 `;
 
-function Card({cardTitle,image}) {
+function Card({cardTitle,image,url,github}) {
 
 
 
@@ -241,8 +242,16 @@ function Card({cardTitle,image}) {
                 </ul>
               )}
             </div>
-            <Button>Web Site</Button>
-            <Button>Git Repo</Button>
+            <Button>
+              <a href={url} alt={url} style={{ "text-decoration": "none" }}>
+                Web Site
+              </a>
+            </Button>
+            <Button>
+              <a href={github} alt={url} style={{ "text-decoration": "none" }}>
+                Git Repo
+              </a>
+            </Button>
           </Content>
         </Cards>
       </CardContainer>
