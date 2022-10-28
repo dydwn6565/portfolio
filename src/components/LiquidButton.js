@@ -47,8 +47,7 @@ const LiquidSection = styled.div`
     left: 20%;
     transform: translate(-50%, -75%);
     background: #000;
-     border-radius: 45%;
-    
+     border-radius: 45%;  
     background-color:black;
     animation: ${animate} 5s linear infinite;
     }
@@ -59,7 +58,6 @@ const LiquidButtonContainer = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    
     width: 60px;
     height:60px;
     overflow: hidden;
@@ -87,10 +85,8 @@ function LiquidButton({type,color}) {
   return (
     <div>
       
-      <LiquidButtonContainer>
-        
+      <LiquidButtonContainer>   
         <LiquidButtonText>
-          
           <img src={type} alt="" width={"30px"} />
         </LiquidButtonText>
     

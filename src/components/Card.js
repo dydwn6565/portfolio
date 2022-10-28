@@ -19,7 +19,6 @@ import pushPin from "../images/push-pin.png"
 const CardContainer = styled.div`
   
   position: relative;
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,14 +28,11 @@ const CardContainer = styled.div`
 
 const PushPin = styled.img`
   width:60px;
-  height:60px;
-  
+  height:60px;  
   margin-top:-200px;
 `
 const Content = styled.div`
   position: relative;
-  
-  // padding: 10px 15px;
   color: #111;
   text-align: center;
   visibility: hidden;
@@ -111,8 +107,6 @@ margin-left:10px;
 `;
 
 function Card({cardTitle,image,url,github}) {
-
-
 
   return (
     <div>

@@ -27,10 +27,10 @@ const ProjectTitle = styled.div`
 const TopAndBottomCard = styled.div`
   width: 100%;
   height: 200px;
-
   display: flex;
   margin-bottom:100px;
   justify-content: space-around;
+  
   @media (max-width: 1900px) {
     height: 350px;
   }
@@ -46,6 +46,7 @@ const MiddleCard = styled.div`
   width: 100%;
   height: 200px;
   justify-content: center;
+
   @media (max-width: 1900px) {
     height: 350px;
   }

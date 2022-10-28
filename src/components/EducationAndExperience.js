@@ -17,7 +17,6 @@ const EducationAndExperienceContainer = styled.div`
   width: 100%;
   height: 1100px;
   min-width: 875px;
-  
 `;
 
 const EducationAndExperienceTitle = styled.div`
@@ -39,7 +38,6 @@ const CircleSvgContainer = styled.path`
 const EducationAndExperienceLeft = styled.div`
   height: 1000px;
   margin-top: -200px;
-  
 `;
 
 const EducationAndExperienceContent = styled.div`
@@ -49,7 +47,6 @@ const EducationAndExperienceContent = styled.div`
 const FlagContainer = styled.div`
   display: flex;
   flex-direction: column;
-  
   height: 500px;
   margin-top: 200px;
   width: 300px;
@@ -77,22 +74,19 @@ const SecondFlagContainer = styled.img`
 `;
 
 const LeftDiagonal = styled.div`
-  // background-image: linear-gradient(45deg, #6303b1, #ff0099);
+  
   transform: skewY(45deg);
   width: 150px;
   display: flex;
-
   justify-content: space-evenly;
   margin-top: 50px;
   margin-left: 70px;
 `;
 
 const RightDiagonal = styled.div`
-  
   transform: skewY(-45deg);
   width: 150px;
   display: flex;
-
   justify-content: space-evenly;
   margin-top: 50px;
   margin-left: 70px;
@@ -108,10 +102,7 @@ const FootPrintTurnRight = styled.div`
 const ContentContainer = styled.div`
   width: 500px;
   height: 500px;
-  
-
   margin-left: 100px;
-
   background: rgba(255, 255, 255, 0.29);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);

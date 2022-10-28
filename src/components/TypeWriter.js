@@ -6,7 +6,6 @@ const TypeWriterContainer = styled.div`
   min-height: 600px;
   width: 100%;
   height: 1200px;
-
   font-size: 30px;
   color: white;
 `;

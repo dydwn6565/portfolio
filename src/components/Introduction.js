@@ -20,8 +20,7 @@ import mysql from "../images/icons/mysql.png";
 import mongodb from "../images/icons/mongodb.png";
 const IntroductionContainer = styled.div`
   width: 800px;
-  height: 700px;
-  
+  height: 700px; 
   margin: 0 auto;
   display: flex;
 `;
@@ -29,7 +28,6 @@ const IntroductionContainer = styled.div`
 const Picture = styled.img`
   height: 250px;
   width: 150px;
-
   display: flex;
   margin-top: 200px;
 `;
@@ -41,14 +39,12 @@ const NameContainer = styled.div`
   align-items: center;
   justify-content: center;
   font-weight: bold;
-
-  
+ 
 `;
 
 const IntroductionPart = styled.div`
   width: 400px;
   height: 200px;
-
   margin-top: 50px;
   margin-left: 90px;
 `;
@@ -61,7 +57,6 @@ const Skills = styled.div`
   width: 400px;
   height: 400px;
   margin-top: 30px;
-
   display: flex;
   flex-wrap: wrap;
 `;
