@@ -65,7 +65,7 @@ const scheduleManagementCalendar = "https://schedulemanager.vercel.app";
 const scheduleManagementCalendarGithub =
   "https://github.com/dydwn6565/schedulemanager"; 
 const spotifyGithub = "https://github.com/dydwn6565/spotifyclone";
-const spotifyClone = "https://spotifyclone1-tau.vercel.app";
+const spotifyClone = "https://spotifyclone-flame.vercel.app";
 const starbucksLandingPage = "https://starbuckslandingpage-umber.vercel.app"; 
 const starbucksLandingPageGithub =
   "https://github.com/dydwn6565/starbucksLandingPage";
