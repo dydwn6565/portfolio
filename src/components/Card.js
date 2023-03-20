@@ -39,6 +39,14 @@ const Content = styled.div`
   opacity: 0;
   transition: 0.3s ease-in-out;
 `;
+
+const HoverH2 = styled.div`
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: "Cabin Sketch", cursive;
+`;
 const Cards = styled.div`
   position: relative;
   max-width: 550px;
@@ -51,7 +59,7 @@ const Cards = styled.div`
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
   border-radius: 15px;
-
+  
   &:hover {
     height: 370px;
     ${Content} {
@@ -59,6 +67,10 @@ const Cards = styled.div`
       visibility: visible;
       opacity: 1;
       transition-delay: 0.2s;
+    }
+    ${HoverH2} {
+      display:none
+      
     }
   }
 `;
@@ -70,10 +82,12 @@ const ImageContainer = styled.div`
   left: 140px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 15px;
+  
 `;
 
 const Image = styled.img`
-  // max-width: 100%;
+  
   width: 250px;
   height: 140px;
   border-radius: 15px;
@@ -115,8 +129,8 @@ function Card({cardTitle,image,url,github}) {
           <ImageContainer>
             <Image src={image} alt=""></Image>
           </ImageContainer>
-
           <PushPin src={pushPin} />
+          <HoverH2>Hover me!</HoverH2>
           <Content>
             <h3>{cardTitle}</h3>
             <div>

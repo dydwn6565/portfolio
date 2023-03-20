@@ -22,7 +22,7 @@ function TypeWriter() {
       <TypeWriterContainer>
         <TypeWriterInside>
           <Typewriter
-            words={["Welcome to my Web page", "My name is Yongju Lee"]}
+            words={[ "My name is Yongju Lee"]}
             loop
             cursor
             cursorStyle="_"

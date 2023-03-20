@@ -80,7 +80,7 @@ function Introduction() {
         <IntroductionContent>
           I'm YongJu Lee. I've been coding for over 2 years now. Even though I
           don't have that much working experience, I am doing self-study to
-          imporve my coding skills.
+          improve my coding skills.
         </IntroductionContent>
         <Skills>
           <LiquidButton type={react} color="#79BAEC" />
