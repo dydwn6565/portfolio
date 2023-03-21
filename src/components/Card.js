@@ -251,12 +251,12 @@ function Card({cardTitle,image,url,github}) {
               )}
             </div>
             <Button>
-              <a href={url} alt={url} style={{ "text-decoration": "none" }}>
+              <a href={url} alt={url} style={{ "textDecoration": "none" }}>
                 Web Site
               </a>
             </Button>
             <Button>
-              <a href={github} alt={url} style={{ "text-decoration": "none" }}>
+              <a href={github} alt={url} style={{ "textDecoration": "none" }}>
                 Git Repo
               </a>
             </Button>
