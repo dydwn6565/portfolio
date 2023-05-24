@@ -17,6 +17,10 @@ const SpinningContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width: 950px) {
+    margin-left:480px;
+    left:0%;
+  }
 `;
 
 const SpinningFirstCircleComponent = styled.div`

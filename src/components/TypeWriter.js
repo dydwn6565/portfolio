@@ -8,12 +8,19 @@ const TypeWriterContainer = styled.div`
   height: 1200px;
   font-size: 30px;
   color: white;
+ 
 `;
 const TypeWriterInside = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width: 950px) {
+    margin-left: 510px;
+    left: 0%;
+    font-size:22px;
+    width:300px;
+  }
 `;
 
 function TypeWriter() {
