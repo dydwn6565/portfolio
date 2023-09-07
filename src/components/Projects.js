@@ -12,33 +12,41 @@ const ProjectContainer = styled.div`
   width: 100%;
   height: 1200px;
   background: #f5f5dc;
-  min-width: 772px;
+  
 `;
 
 const ProjectTitle = styled.div`
   display: flex;
   justify-content: center;
   font-size: 70px;
+  margin-top: 20px;
   font-family: "Cabin Sketch", cursive;
-  margin-bottom:100px;
-  
+  margin-bottom: 100px;
+  padding:15px;
+  @media (max-width: 1290px) {
+    font-size: 5vw;
+  }
 `;
 
 const TopAndBottomCard = styled.div`
   width: 100%;
   height: 200px;
   display: flex;
-  margin-bottom:100px;
+  margin-bottom: 100px;
   justify-content: space-around;
-  
+
   @media (max-width: 1900px) {
     height: 350px;
   }
   @media (max-width: 1290px) {
     flex-direction: column;
     margin-top: 340px;
-    height: 250px;
-    
+  }
+  @media (max-width: 550px) {
+    margin-top: 60vw;
+  }
+  @media (max-width: 350px) {
+    margin-top:250px;
   }
 `;
 const MiddleCard = styled.div`
@@ -74,7 +82,6 @@ function Projects() {
     <div>
       <ProjectContainer>
         <ProjectTitle>Projects</ProjectTitle>
-
         <TopAndBottomCard>
           <Card
             cardTitle={"Shopping Mall"}

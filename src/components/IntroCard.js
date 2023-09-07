@@ -22,33 +22,62 @@ import mysql from "../images/icons/mysql.png";
 import mongodb from "../images/icons/mongodb.png";
 import LiquidButton from "./LiquidButton";
 const MySkills = styled.div`
-  width: 550px;
-  height: 300px;
+  width: 500px;
+  height: 250px;
   margin: 0 auto;
   border-radius: 20px;
   padding: 40px;
   background-color: #ffffe0;
-  margin-top:60px;
+  margin-top: 60px;
+  @media (max-width: 650px) {
+    width: 70vw;
+    height: 300px;
+    padding: 5vw;
+  }
+  @media (max-width: 400px) {
+    
+    height: 70vw;
+  
+  }
 `;
 const IntroIcon = styled.div`
   font-size: 50px;
-  display:flex;
-  justify-content:center;
-  margin-right:20px;
-  margin-bottom:10px;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  @media (max-width: 650px) {
+    font-size: 7vw;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 460px) {
+  }
 `;
 const IntroTitle = styled.div`
   font-size: 30px;
   margin-left: 10px;
-  display:flex;
-  
+  display: flex;
+  @media (max-width: 650px) {
+    font-size: 5vw;
+  }
+  @media (max-width: 420px) {
+  }
 `;
 const IntroTitleIcons = styled.div`
-  
   display: flex;
-  margin-bottom:10px;
+  margin-bottom: 10px;
+  @media (max-width: 540px) {
+    flex-wrap: wrap;
+  }
 `;
-
+const IntroTitleIconsInside = styled.div`
+  display: flex;
+`;
+const IntroText = styled.div`
+  @media (max-width: 650px) {
+    font-size: 2.7vw;
+  }
+`;
 function IntroCard({ text, icon, title }) {
   return (
     <div>
@@ -70,6 +99,7 @@ function IntroCard({ text, icon, title }) {
                 <LiquidButton type={typescript} color="#79ecb4" />
                 <LiquidButton type={html} color="#d7ec79" />
                 <LiquidButton type={javascript} />
+
                 <LiquidButton type={nextjs} color="#79BAEC" />
                 <LiquidButton type={tailwind} color="#79BAEC" />
                 <LiquidButton type={bootstrap} />
@@ -82,6 +112,7 @@ function IntroCard({ text, icon, title }) {
                 <LiquidButton type={python} color="#79BAEC" />
                 <LiquidButton type={flask} color="#79ecb4" />
                 <LiquidButton type={firebase} color="#d7ec79" />
+
                 <LiquidButton type={postgresql} color="#474ed1" />
                 <LiquidButton type={mysql} color="#79BAEC" />
 
@@ -89,7 +120,7 @@ function IntroCard({ text, icon, title }) {
               </IntroTitleIcons>
             )}
           </div>
-          <div>{text}</div>
+          <IntroText>{text}</IntroText>
         </div>
       </MySkills>
     </div>

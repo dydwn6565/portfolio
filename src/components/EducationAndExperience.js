@@ -15,19 +15,23 @@ const dash = keyframes`
 
 const EducationAndExperienceContainer = styled.div`
   width: 100%;
-  height: 1100px;
-  min-width: 875px;
+  // height: 1100px;
+  
 `;
 
 const EducationAndExperienceTitle = styled.div`
   display: flex;
   justify-content: center;
   font-size: 50px;
+  margin-bottom:50px;
+  @media (max-width: 1000px) {
+    font-size:5vw;
+  }
 `;
 const CircleSvgContainer = styled.path`
   stroke-dasharray: 4500;
   stroke-dashoffset: 0;
-  animation: ${dash} 0.8s linear alternate;
+  animation: ${dash} 1.2s linear alternate;
 
   display: flex;
   margin-top: -260px;
@@ -36,13 +40,19 @@ const CircleSvgContainer = styled.path`
   justify-content: center;
 `;
 const EducationAndExperienceLeft = styled.div`
-  height: 1000px;
+  
   margin-top: -200px;
+  @media (max-width: 1000px) {
+    
+  }
 `;
 
 const EducationAndExperienceContent = styled.div`
   display: flex;
   justify-content: center;
+  @media (max-width: 1000px) {
+    display:inline;
+  }
 `;
 const FlagContainer = styled.div`
   display: flex;
@@ -51,6 +61,12 @@ const FlagContainer = styled.div`
   margin-top: 200px;
   width: 300px;
   margin-left: 50px;
+  @media (max-width: 1000px) {
+    margin-left: unset;
+    height: unset;
+    margin-top: 250px;
+  }
+  
 `;
 
 const FirstFlagContainer = styled.img`
@@ -60,6 +76,14 @@ const FirstFlagContainer = styled.img`
 
   &:hover {
     opacity: 0.5;
+  }
+  @media (max-width: 1000px) {
+    width: 50px;
+    height: 50px;
+  }
+  @media (max-width: 420px) {
+    width: 40px;
+    height: 40px;
   }
 `;
 const SecondFlagContainer = styled.img`
@@ -71,16 +95,58 @@ const SecondFlagContainer = styled.img`
   &:hover {
     opacity: 0.5;
   }
+  @media (max-width: 1000px) {
+    width: 50px;
+    height: 50px;
+    margin-top: -40px;
+    margin-left: 180px;
+  }
+  @media (max-width: 420px) {
+    width: 40px;
+    height: 40px;
+    margin-top: -30px;
+    margin-left: 120px;
+  }
+`;
+
+const LastFlagContainer = styled.img`
+  width: 100px;
+  height: 100px;
+  // margin-left: 200px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+  @media (max-width: 1000px) {
+    width: 50px;
+    height: 50px;
+    margin-top: -40px;
+    margin-left: 350px;
+  }
+  @media (max-width: 420px) {
+    width: 40px;
+    height: 40px;
+    margin-top: -30px;
+    margin-left: 240px;
+  }
 `;
 
 const LeftDiagonal = styled.div`
-  
   transform: skewY(45deg);
   width: 150px;
   display: flex;
   justify-content: space-evenly;
   margin-top: 50px;
   margin-left: 70px;
+  @media (max-width: 1000px) {
+    transform: unset;
+    margin-top: -30px;
+    margin-left: 30px;
+  }
+  @media (max-width: 420px) {
+    width:100px;
+  }
 `;
 
 const RightDiagonal = styled.div`
@@ -90,6 +156,16 @@ const RightDiagonal = styled.div`
   justify-content: space-evenly;
   margin-top: 50px;
   margin-left: 70px;
+  @media (max-width: 1000px) {
+    transform: rotate(-181deg);
+    margin-top: -28px;
+    margin-left: 220px;
+  }
+  @media (max-width: 420px) {
+    width: 100px;
+    margin-left: 150px;
+    margin-top:-30px;
+  }
 `;
 const FootPrintTurnLeft = styled.div`
   transform: rotate(90deg);
@@ -101,7 +177,7 @@ const FootPrintTurnRight = styled.div`
 
 const ContentContainer = styled.div`
   width: 500px;
-  height: 500px;
+  height: 600px;
   margin-left: 100px;
   background: rgba(255, 255, 255, 0.29);
   border-radius: 16px;
@@ -109,6 +185,20 @@ const ContentContainer = styled.div`
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   border: 1px solid rgba(255, 255, 255, 0.24);
+  margin-bottom:150px;
+  @media (max-width: 1000px) {
+    margin-left: unset;
+    width: 70vw;
+    height: 75vw;
+    
+  }
+`;
+const CoverContent = styled.div`
+  @media (max-width: 1000px) {
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+  }
 `;
 
 const ContentTitle = styled.div`
@@ -117,20 +207,46 @@ const ContentTitle = styled.div`
   margin-top: 20px;
   font-size: 25px;
   font-weight: bold;
+  @media (max-width: 1000px) {
+    font-size: 3.5vw;
+  }
+  @media (max-width: 400px) {
+    margin-top: 5px;
+  }
 `;
 const Content = styled.div`
 width:400px
 padding:20px;
 margin-left:30px;
+@media (max-width: 1000px) {
+    margin-left:unset;
+  }
+  @media (max-width: 700px) {
+    // padding:5px;
+  }
 `;
 const ContentLi = styled.li`
   padding: 10px;
+  @media (max-width: 1000px) {
+    font-size: 2vw;
+  }
+  @media (max-width: 700px) {
+    padding: 3px;
+    font-size: 2.5vw;
+  }
 `;
 
 const ContentLiTitle = styled.li`
   padding: 10px;
   font-weight: bold;
   font-size: 18px;
+  @media (max-width: 1000px) {
+    font-size: 2vw;
+  }
+  @media (max-width: 700px) {
+    padding: 3px;
+    font-size: 2.5vw;
+  }
 `;
 
 const LookingForCareer = styled.div`
@@ -138,6 +254,12 @@ const LookingForCareer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 220px;
+  @media (max-width: 1000px) {
+    font-size: 4vw;
+    
+    margin-top:30vw;
+    top:50;
+  }
 `;
 
 function EducationAndExperience() {
@@ -159,7 +281,7 @@ function EducationAndExperience() {
         <EducationAndExperienceTitle>
           Education With Work Experience
         </EducationAndExperienceTitle>
-        <CircleSvgContainer>
+        {/* <CircleSvgContainer>
           <svg
             ref={circleRef}
             width="150"
@@ -175,7 +297,7 @@ function EducationAndExperience() {
               strokeLinecap="round"
             />
           </svg>
-        </CircleSvgContainer>
+        </CircleSvgContainer> */}
         <EducationAndExperienceContent>
           <EducationAndExperienceLeft>
             <FlagContainer>
@@ -226,7 +348,7 @@ function EducationAndExperience() {
                   <RiFootprintFill />
                 </FootPrintTurnRight>
               </RightDiagonal>
-              <FirstFlagContainer
+              <LastFlagContainer
                 src={flag}
                 alt=""
                 onClick={() => showingContent(3)}
@@ -234,65 +356,73 @@ function EducationAndExperience() {
             </FlagContainer>
           </EducationAndExperienceLeft>
           {contentNumber === 1 && (
+              <CoverContent>
             <ContentContainer>
-              <ContentTitle>Education</ContentTitle>
-              <Content>
-                <ul>
-                  <ContentLiTitle>
-                    British Columbia Institute of Technology{" "}
-                  </ContentLiTitle>
-                  <ContentLiTitle>Computer Systems Technology</ContentLiTitle>
-                  <ContentLi>Sep 2019 - June 2021 </ContentLi>
-                  <ContentLi>
-                    Attended computer lanuages courses in BCIT (Python, Java,
-                  </ContentLi>
-                  <ContentLi>
-                    Javascript, C, C++, C#,Firsebase, MongoDB,SQL)
-                  </ContentLi>
-                  <ContentLi>
-                    Worked with a lot of projects with my classmates to develop
-                    my coding skills and teamwork.
-                  </ContentLi>
-                  <ContentLi>
-                    Studied the structure of the computer and related math
-                    lectures.
-                  </ContentLi>
-                  <ContentLi>
-                    Leaned the algorithms for program to optimize a application.
-                  </ContentLi>
-                </ul>
-              </Content>
+                <ContentTitle>Education</ContentTitle>
+                <Content>
+                  <ul>
+                    <ContentLiTitle>
+                      British Columbia Institute of Technology{" "}
+                    </ContentLiTitle>
+                    <ContentLiTitle>Computer Systems Technology</ContentLiTitle>
+                    <ContentLi>Sep 2019 - June 2021 </ContentLi>
+                    <ContentLi>
+                      Attended computer lanuages courses in BCIT (Python, Java,
+                    </ContentLi>
+                    <ContentLi>
+                      Javascript, C, C++, C#,Firsebase, MongoDB,SQL)
+                    </ContentLi>
+                    <ContentLi>
+                      Worked with a lot of projects with my classmates to
+                      develop my coding skills and teamwork.
+                    </ContentLi>
+                    <ContentLi>
+                      Studied the structure of the computer and related math
+                      lectures.
+                    </ContentLi>
+                    <ContentLi>
+                      Leaned the algorithms for program to optimize a
+                      application.
+                    </ContentLi>
+                  </ul>
+                </Content>
             </ContentContainer>
+              </CoverContent>
           )}
 
           {contentNumber === 2 && (
+              <CoverContent>
             <ContentContainer>
-              <ContentTitle>Work Experience</ContentTitle>
-              <Content>
-                <ul>
-                  <ContentLiTitle>Web Developer </ContentLiTitle>
-                  <ContentLiTitle>Tekworthy</ContentLiTitle>
-                  <ContentLi>Jan 2021 - May 2021 </ContentLi>
-                  <ContentLi>
-                    Implemented customized widgets to link to our registed
-                    user's webpage.
-                  </ContentLi>
-                  <ContentLi>
-                    Implemented two-step verification (confirm email and phone
-                    number).
-                  </ContentLi>
-                  <ContentLi>
-                    Created components can manage our registered user's profit.
-                  </ContentLi>
-                </ul>
-              </Content>
+                <ContentTitle>Work Experience</ContentTitle>
+                <Content>
+                  <ul>
+                    <ContentLiTitle>Web Developer </ContentLiTitle>
+                    <ContentLiTitle>Tekworthy</ContentLiTitle>
+                    <ContentLi>Jan 2021 - May 2021 </ContentLi>
+                    <ContentLi>
+                      Implemented customized widgets to link to our registed
+                      user's webpage.
+                    </ContentLi>
+                    <ContentLi>
+                      Implemented two-step verification (confirm email and phone
+                      number).
+                    </ContentLi>
+                    <ContentLi>
+                      Created components can manage our registered user's
+                      profit.
+                    </ContentLi>
+                  </ul>
+                </Content>
             </ContentContainer>
+              </CoverContent>
           )}
 
           {contentNumber === 3 && (
+              <CoverContent>
             <ContentContainer>
-              <LookingForCareer>Looking for a next career</LookingForCareer>
+                <LookingForCareer>Looking for a next career</LookingForCareer>
             </ContentContainer>
+              </CoverContent>
           )}
         </EducationAndExperienceContent>
       </EducationAndExperienceContainer>

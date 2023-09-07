@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import surfboard from "../images/surfboard.png";
+
 import { FaPersonSwimming } from "react-icons/fa6";
 import { FaUserGraduate } from "react-icons/fa";
 import { AiOutlineFolderOpen } from "react-icons/ai";
@@ -12,29 +12,71 @@ const HeaderConainer = styled.div`
   position: absolute;
 `;
 const ImageContainer = styled.div`
-  justify-content: center;
+  justify-content: space-evenly;
   display: flex;
-  
+  color:white;
+  cursor:pointer;
+  margin-top:20px;
+  margin-left: 20px;
+  font-size: 30px;
 `;
 
-function Header() {
+function Header(targetRef) {
   const MoveTointroPage = () => {
+    
+
+      window.scrollTo({
+        top: 1100,
+        behavior: "smooth",
+      
+    })
+  };
+  const MoveToCarrer = () => {
     window.scrollTo({
-      top: 1100,
+      top: 2300,
       behavior: "smooth",
     });
   };
+  const MoveToProject = () => {
+    window.scrollTo({
+      top: 3350,
+      behavior: "smooth",
+    });
+  };
+  const MoveToContact = () => {
+    window.scrollTo({
+      top: 5200,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <HeaderConainer>
-        <div>
-          <ImageContainer>
-            <FaPersonSwimming onClick={()=>{MoveTointroPage()}}/>
-            <FaUserGraduate/>
-            <AiOutlineFolderOpen/>
-            <GiSkills/>
-          </ImageContainer>
-        </div>
+        <ImageContainer>
+          <FaPersonSwimming
+            onClick={() => {
+              MoveTointroPage();
+            }}
+          />
+
+          <FaUserGraduate
+            onClick={() => {
+              MoveToCarrer();
+            }}
+          />
+
+          <AiOutlineFolderOpen
+            onClick={() => {
+              MoveToProject();
+            }}
+          />
+          <GiSkills
+            onClick={() => {
+              MoveToContact();
+            }}
+          />
+        </ImageContainer>
       </HeaderConainer>
     </div>
   );

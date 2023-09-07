@@ -5,31 +5,33 @@ import { ImPhone } from "react-icons/im";
 import { useForm } from "react-hook-form";
 const ContactBackground = styled.div`
   width: 100%;
-  height: 1550px;
+  height:100%;
 
   display: flex;
   justify-content: center;
-
   background: #f5f5dc;
 
-  min-width: 772px;
-
-  @media (max-width: 1900px) {
-    height: 750px;
-  }
-  @media (max-width: 1290px) {
-    height: 1550px;
-  }
 `;
 const ContactContainer = styled.div`
-  width: 500px;
-  height: 150px;
+  margin-bottom: 30px;
 
   @media (max-width: 1900px) {
     margin-top: 300px;
   }
   @media (max-width: 1290px) {
-    margin-top: 1040px;
+    margin-top: 1140px;
+  }
+  @media (max-width: 550px) {
+    margin-top: 200vw;
+  }
+  @media (max-width: 400px) {
+    margin-top: 220vw;
+  }
+  @media (max-width: 350px) {
+    margin-top: 250vw;
+  }
+  @media (max-width: 320px) {
+    margin-top: 270vw;
   }
 `;
 
@@ -49,18 +51,24 @@ const ContactContent = styled.div`
   & > span {
     margin-left: 20px;
   }
+  @media (max-width: 620px) {
+    font-size: 3vw;
+    
+  }
 `;
 const NameInput = styled.input`
   width: 200px;
   height: 30px;
   margin: 30px 20px 20px 0px;
-  
-  border:none;
-  
+
+  border: none;
+  @media (max-width: 900px) {
+    width: 25vw;
+    margin: 2.2vw 2vw 2vw 0vw ;
+  }
 `;
 const NameInputContainer = styled.div`
   display: flex;
-  
 `;
 const SubjectInput = styled.input`
   display: flex;
@@ -68,46 +76,53 @@ const SubjectInput = styled.input`
   height: 30px;
   margin: 0px 20px 20px 0px;
   width: 425px;
+  @media (max-width: 900px) {
+    width: 52.7vw;
+  }
 `;
 
 const MessageInput = styled.textarea`
   width: 425px;
   height: 30px;
-  max-width:425px;
-  max-height:40px;
-  border:none;
+  max-width: 425px;
+  max-height: 40px;
+  border: none;
+  @media (max-width: 900px) {
+    width: 52.9vw;
+    max-width:52.9vw;
+  }
 `;
 const ContactSubmitButton = styled.button`
-  width: 200px;
+  width: 425px;
 
   margin-top: 20px;
   background-color: #ffdb58;
   height: 40px;
   border: none;
   cursor: pointer;
-  margin-left: 110px;
+  @media (max-width: 900px) {
+    width: 52.9vw;
+  }
 `;
 
 const ContactComponent = styled.form`
   display: flex;
   flex-direction: column;
-  margin-left:40px;
   
 `;
- const Inputs ={
-  name :String,
-  email:String,
-  subject:String,
-  message:String
-
- }
+const Inputs = {
+  name: String,
+  email: String,
+  subject: String,
+  message: String,
+};
 function Contact() {
   const linktoGmail = () => {
     window.location.href = "mailto:ivan.yongju.lee@gmail.com";
   };
- const { register, handleSubmit } = useForm();
-  
-  const onSubmit  = (data) => {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
     window.location.href = `mailto:ivan.yongju.lee@gmail.com?subject=${data.subject}&body=Hi, my name is ${data.name}. ${data.message} (${data.email})`;
   };
   return (

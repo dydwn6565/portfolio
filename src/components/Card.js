@@ -27,10 +27,16 @@ const CardContainer = styled.div`
 `;
 
 const PushPin = styled.img`
-  width:60px;
-  height:60px;  
-  margin-top:-200px;
-`
+  width: 60px;
+  height: 60px;
+  margin-top: -200px;
+  @media (max-width: 690px) {
+    margin-top: -35vw;
+    width:10vw;
+    height:10vw;
+  }
+  
+`;
 const Content = styled.div`
   position: relative;
   color: #111;
@@ -38,6 +44,9 @@ const Content = styled.div`
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease-in-out;
+  @media (max-width: 690px) {
+    font-size:2.5vw;
+  }
 `;
 
 const HoverH2 = styled.div`
@@ -46,6 +55,9 @@ const HoverH2 = styled.div`
   justify-content: center;
   font-size: 30px;
   font-family: "Cabin Sketch", cursive;
+  @media (max-width: 420px) {
+    margin-top:25vw;
+  }
 `;
 const Cards = styled.div`
   position: relative;
@@ -55,11 +67,12 @@ const Cards = styled.div`
   margin: 30px 10px;
   padding: 20px 15px;
   display: flex;
+
   flex-direction: column;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
   border-radius: 15px;
-  
+
   &:hover {
     height: 370px;
     ${Content} {
@@ -69,8 +82,17 @@ const Cards = styled.div`
       transition-delay: 0.2s;
     }
     ${HoverH2} {
-      display:none
-      
+      display: none;
+    }
+  }
+  @media (max-width: 550px) {
+    &:hover {
+      height: 300px;
+    }
+  }
+  @media (max-width: 420px) {
+    &:hover {
+      height: 250px;
     }
   }
 `;
@@ -83,18 +105,30 @@ const ImageContainer = styled.div`
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 15px;
-  
+  @media (max-width: 690px) {
+    width: 40vw;
+    left: 18vw;
+    height: 25vw;
+    
+  }
+  @media (max-width: 420px) {
+    left:14vw;
+    top:-35%;
+  }
 `;
 
 const Image = styled.img`
-  
   width: 250px;
   height: 140px;
   border-radius: 15px;
+  @media (max-width: 690px) {
+    width: 40vw;
+    height: 25vw;
+  }
 `;
 const Button = styled.button`
-margin-top:20px;
-margin-left:10px;
+  margin-top: 20px;
+  margin-left: 10px;
   width: 140px;
   height: 45px;
   font-family: "Roboto", sans-serif;
@@ -110,13 +144,22 @@ margin-left:10px;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  
+
   &:hover {
     background-color: #2ee59d;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
     transform: translateY(-7px);
-    
+  }
+  @media (max-width: 690px) {
+    width:20vw;
+    height:8vw;
+  }
+`;
+const CardIconImage = styled.img`
+  width: 40px;
+  @media (max-width: 420px) {
+    width:7vw;
   }
 `;
 
@@ -136,45 +179,45 @@ function Card({cardTitle,image,url,github}) {
             <div>
               {cardTitle === "Shopping Mall" && (
                 <>
-                  <img src={nodejs} alt="" width="40px" />
-                  <img src={react} alt="" width="40px" />
-                  <img src={css} alt="" width="40px" />
-                  <img src={firebase} alt="" width="40px" />
+                  <CardIconImage src={nodejs} alt=""  />
+                  <CardIconImage src={react} alt=""  />
+                  <CardIconImage src={css} alt=""  />
+                  <CardIconImage src={firebase} alt=""  />
                 </>
               )}
 
               {cardTitle === "Instagram Clone" && (
                 <>
-                  <img src={nodejs} alt="" width="40px" />
-                  <img src={react} alt="" width="40px" />
-                  <img src={css} alt="" width="40px" />
-                  <img src={postgresql} alt="" width="40px" />
+                  <CardIconImage src={nodejs} alt=""  />
+                  <CardIconImage src={react} alt=""  />
+                  <CardIconImage src={css} alt=""  />
+                  <CardIconImage src={postgresql} alt=""  />
                 </>
               )}
               {cardTitle === "Calendar Schedule Management" && (
                 <>
-                  <img src={react} alt="" width="40px" />
+                  <CardIconImage src={react} alt=""  />
 
-                  <img src={flask} alt="" width="40px" />
-                  <img src={python} alt="" width="40px" />
+                  <CardIconImage src={flask} alt=""  />
+                  <CardIconImage src={python} alt=""  />
                 </>
               )}
               {cardTitle === "Spotify Clone" && (
                 <>
-                  <img src={nextjs} alt="" width="40px" />
-                  <img src={typescript} alt="" width="40px" />
-                  <img src={tailwind} alt="" width="40px" />
+                  <CardIconImage src={nextjs} alt=""  />
+                  <CardIconImage src={typescript} alt=""  />
+                  <CardIconImage src={tailwind} alt=""  />
                 </>
               )}
               {cardTitle === "Starbucks Landing Page" && (
                 <>
-                  <img src={javascript} alt="" width="40px" />
-                  <img src={css} alt="" width="40px" />
+                  <CardIconImage src={javascript} alt=""  />
+                  <CardIconImage src={css} alt=""  />
                 </>
               )}
 
               {cardTitle === "Shopping Mall" && (
-                <ul>
+                <div>
                   <div>
                     Implemented Log-in and Sign-up feature with validation check
                     using Formik and Material-Ui library
@@ -191,10 +234,10 @@ function Card({cardTitle,image,url,github}) {
                     Implemented an E-commerce payment process system with
                     Stripe.js
                   </div>
-                </ul>
+                </div>
               )}
               {cardTitle === "Instagram Clone" && (
-                <ul>
+                <div>
                   <div>
                     Created images posting with comments and likes also chatting
                     function(seach and add a friend to chatting room)
@@ -208,19 +251,19 @@ function Card({cardTitle,image,url,github}) {
                     Designed user, comment, like, post schema to create Restful
                     API.
                   </div>
-                </ul>
+                </div>
               )}
               {cardTitle === "Calendar Schedule Management" && (
-                <ul>
+                <div>
                   <div>
                     Implemented multiple colors calendar to manage day and
                     dates’ schedule visually.
                   </div>
                   <div>Created Graphql API to manage users and schedules.</div>
-                </ul>
+                </div>
               )}
               {cardTitle === "Spotify Clone" && (
-                <ul>
+                <div>
                   <div>
                     Fetching data to the Spotify server to retrieve API to
                     display user(my account)’s playlists, favorite songs lists,
@@ -232,10 +275,10 @@ function Card({cardTitle,image,url,github}) {
                     now my playlist can not play a song because only premium
                     user can use this service)
                   </div>
-                </ul>
+                </div>
               )}
               {cardTitle === "Starbucks Landing Page" && (
-                <ul>
+                <div>
                   <div>
                     Fetching data to the Spotify server to retrieve API to
                     display user(my account)’s playlists, favorite songs lists,
@@ -247,7 +290,7 @@ function Card({cardTitle,image,url,github}) {
                     now my playlist can not play a song because only premium
                     user can use this service)
                   </div>
-                </ul>
+                </div>
               )}
             </div>
             <Button>

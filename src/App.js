@@ -1,13 +1,9 @@
 import "./App.css";
-import ReactPlayer from "react-player";
-
 import styled from "styled-components";
-
 import TypeWriter from "./components/TypeWriter";
-
 import WhoAmI from "./components/WhoAmI";
 import sea from "./images/sea.jpg";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import SpinningCircle from "./components/SpinningCircle";
 import EducationAndExperience from "./components/EducationAndExperience";
 import Projects from "./components/Projects";
@@ -22,17 +18,17 @@ const MainComponent = styled.div`
   background-repeat: no-repeat;
   height: 3500px;
   background-image: url(${sea});
-  min-width:925px;
+  
   background-position: center;
 `;
 
 const MaincomponentInner = styled.div`
   width: 100%;
-  height: 350vh;
+  
 `;
 
 function App() {
-
+  const targetRef = useRef(null);
   //scroll event 
 
   // const scrollRef = useRef(null);
@@ -70,15 +66,15 @@ function App() {
     <div className="App">
       {/* <MainComponent ref={scrollRef} theme={theme}> */}
       <MainComponent>
-        <Header />
         <MaincomponentInner>
+          <Header targetRef={targetRef} />
           <TypeWriter />
           <VideoComponent></VideoComponent>
           <SpinningCircle />
-          <WhoAmI />
+          <WhoAmI  />
           <EducationAndExperience />
           <Projects />
-        <Contact/>
+          <Contact />
         </MaincomponentInner>
       </MainComponent>
     </div>

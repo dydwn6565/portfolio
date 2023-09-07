@@ -8,8 +8,8 @@ const spin = keyframes`
 `;
 
 const SpinningContainer = styled.div`
-  width: 800px;
-  height: 800px;
+  // width: 800px;
+  // height: 800px;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -17,16 +17,16 @@ const SpinningContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media (max-width: 950px) {
-    margin-left:480px;
-    left:0%;
+  @media (max-width: 820px) {
+    // font-size: 3.5vw;
+    top: 57vw;
   }
 `;
 
 const SpinningFirstCircleComponent = styled.div`
   margin: 0 auto;
-  width: 275px;
-  height: 275px;
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
   position: absolute;
   border: 5px dotted transparent;
@@ -36,8 +36,8 @@ const SpinningFirstCircleComponent = styled.div`
 
 const SpinningSecondCircleComponent = styled.div`
   margin: 0 auto;
-  width: 200px;
-  height: 200px;
+  width: 15vw;
+  height: 15vw;
   border-radius: 50%;
   position: absolute;
   border: 5px dotted transparent;
@@ -48,8 +48,8 @@ const SpinningSecondCircleComponent = styled.div`
 
 const SpinningThirdCircleComponent = styled.div`
   margin: 0 auto;
-  width: 150px;
-  height: 150px;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
   position: absolute;
   border: 5px dotted transparent;
