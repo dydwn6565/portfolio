@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import Introduction from "./Introduction";
 
 const WhoAmIContainer = styled.div`
@@ -10,7 +9,7 @@ const WhoAmIContainer = styled.div`
 
 const WhoAmIInner = styled.div`
   width: 100%;
-  height: 700px;
+  height: 1000px;
   background-color: #f4d34a;
 `;
 

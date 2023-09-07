@@ -12,6 +12,7 @@ import SpinningCircle from "./components/SpinningCircle";
 import EducationAndExperience from "./components/EducationAndExperience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Header from "./components/Header";
 
 const VideoComponent = styled.div`
   margin-top: -120px;
@@ -69,6 +70,7 @@ function App() {
     <div className="App">
       {/* <MainComponent ref={scrollRef} theme={theme}> */}
       <MainComponent>
+        <Header />
         <MaincomponentInner>
           <TypeWriter />
           <VideoComponent></VideoComponent>

@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 import { keyframes } from "styled-components";
-
 
 const animate = keyframes`
   0% {
@@ -14,13 +13,14 @@ const animate = keyframes`
 `;
 
 const LiquidSection = styled.div`
+
  position: absolute;
     top: -70px;
     left: 0;
     width: 170px;
     height: 170px;
     
-    background: ${props=>props.theme};
+    background: ${(props) => props.theme};
     box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
     transition: .5s
 
@@ -58,8 +58,8 @@ const LiquidButtonContainer = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    width: 60px;
-    height:60px;
+    width: 50px;
+    height:50px;
     overflow: hidden;
     border-radius: 80px;
 
@@ -71,31 +71,27 @@ const LiquidButtonContainer = styled.div`
     }
 }
 `;
-const LiquidButtonText =styled.span`
- position: relative;
-    color: #fff;
-    fot-size: 20px;
-    font-family: Arial;
-    letter-spacing: 8px;
-    z-index: 1;
-`
+const LiquidButtonText = styled.span`
+  position: relative;
+  color: #fff;
+  // fot-size: 20px;
+  font-family: Arial;
+  letter-spacing: 8px;
+  z-index: 1;
+`;
 
-
-function LiquidButton({type,color}) {
+function LiquidButton({ type, color }) {
   return (
     <div>
-      
-      <LiquidButtonContainer>   
+      <LiquidButtonContainer>
         <LiquidButtonText>
           <img src={type} alt="" width={"30px"} />
         </LiquidButtonText>
-    
+
         <LiquidSection theme={color}></LiquidSection>
       </LiquidButtonContainer>
-      
     </div>
   );
 }
 
-export default LiquidButton
-
+export default LiquidButton;
