@@ -5,6 +5,7 @@ import styled from "styled-components";
 const TypeWriterContainer = styled.div`
   height: 1200px;
   font-size: 2vw;
+  
   color: white;
   @media (max-width: 820px) {
     height: 150vw;

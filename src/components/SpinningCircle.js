@@ -27,6 +27,8 @@ const SpinningFirstCircleComponent = styled.div`
   margin: 0 auto;
   width: 30vw;
   height: 30vw;
+  max-width: 300px;
+  max-height: 300px;
   border-radius: 50%;
   position: absolute;
   border: 5px dotted transparent;
@@ -38,6 +40,8 @@ const SpinningSecondCircleComponent = styled.div`
   margin: 0 auto;
   width: 15vw;
   height: 15vw;
+  max-width: 150px;
+  max-height: 150px;
   border-radius: 50%;
   position: absolute;
   border: 5px dotted transparent;
@@ -50,6 +54,8 @@ const SpinningThirdCircleComponent = styled.div`
   margin: 0 auto;
   width: 10vw;
   height: 10vw;
+  max-width: 100px;
+  max-height: 100px;
   border-radius: 50%;
   position: absolute;
   border: 5px dotted transparent;

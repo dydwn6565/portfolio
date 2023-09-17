@@ -8,17 +8,20 @@ import { GiSkills } from "react-icons/gi";
 const HeaderConainer = styled.div`
   width: 100%;
   height: 90px;
-  // background-color: #333;
+  
   position: absolute;
 `;
 const ImageContainer = styled.div`
   justify-content: space-evenly;
   display: flex;
-  color:white;
-  cursor:pointer;
-  margin-top:20px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
   margin-left: 20px;
   font-size: 30px;
+  @media (max-width: 820px) {
+    display:none;
+  }
 `;
 
 function Header(targetRef) {
